@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="3" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.tms.listeners.ListenerClass"/>
+    <listener class-name="com.tms.listeners.MethodInteceptor"/>
+    <listener class-name="com.tms.listeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="Test(failed)">
+    <classes>
+      <class name="com.tms.tests.StudentEnrollmentPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="EditStudentEnrollmentRecordTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tms.tests.StudentEnrollmentPageTest -->
+      <class name="com.tms.tests.DashboardPageTest">
+        <methods>
+          <include name="Menutest4" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="SubMenutest4" invocation-numbers="0"/>
+          <include name="SubMenutest2" invocation-numbers="0"/>
+          <include name="SubMenutest3" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.tms.tests.DashboardPageTest -->
+      <class name="com.tms.tests.CoursePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="AddnewCourseRecordTest" invocation-numbers="0"/>
+          <include name="EditCourseRecordTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.tms.tests.CoursePageTest -->
+      <class name="com.tms.tests.TrainerPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="EditTrainerRecordTest" invocation-numbers="0"/>
+          <include name="AddnewTrainerRecordTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.tms.tests.TrainerPageTest -->
+      <class name="com.tms.tests.LoginPageTest">
+        <methods>
+          <include name="forgetpasswordlinktest" invocation-numbers="1 0"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="forgetpasswordlinktest1" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.tms.tests.LoginPageTest -->
+      <class name="com.tms.tests.VenuePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="AddnewVenueRecordTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="EditVenueRecordTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.tms.tests.VenuePageTest -->
+      <class name="com.tms.tests.StaffPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="AddnewRecordTest" invocation-numbers="0 2 1"/>
+          <include name="EditRecordTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.tms.tests.StaffPageTest -->
+      <class name="com.tms.tests.CourseRunPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="EditCourseRunRecordTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.tms.tests.CourseRunPageTest -->
+      <class name="com.tms.tests.CourseSoftBookingsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="AddnewCourseSoftBookingsRecordTest" invocation-numbers="0"/>
+          <include name="EditCourseSoftBookingsRecordTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.tms.tests.CourseSoftBookingsPageTest -->
+      <class name="com.tms.tests.PaymentPageTest">
+        <methods>
+          <include name="EditPaymentRecordTest" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="AddnewPaymentRecordTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.tms.tests.PaymentPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
