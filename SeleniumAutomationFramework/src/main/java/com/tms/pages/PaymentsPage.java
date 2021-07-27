@@ -7,8 +7,8 @@ import com.tms.enums.WaitStrategy;
 public class PaymentsPage extends BasePage {
 	
 	private final By Addnew = By.xpath("//button[.='+ Add New']");
-	private final By Editrecord = By.xpath("//tr//i[@class='fas fa-edit text-info font-16']");
-	private final By updateprofile = By.cssSelector(".btn.btn-primary.px-4.float-right");
+	private final By Editrecord = By.xpath("(//tr//i[@class='fas fa-pencil-alt text-info font-16'])[1]");
+	private final By updateprofile = By.cssSelector(".btn.btn-primary.mar-r-10");
 	private final By Paymentmode = By.xpath("//select[@name='payment_mode']");
 	private final By Selectpaymentmode = By.xpath("//option[contains(.,'Cash')]");
 	private final By Feespaidamount = By.id("fee_amount");

@@ -7,7 +7,7 @@ import com.tms.enums.WaitStrategy;
 public class VenuePage extends BasePage {
 	
 	private final By Addnew = By.xpath("//a[text()=' Add New']");
-	private final By Editrecord = By.xpath("//tr//i[@class='fas fa-edit text-info font-16']");
+	private final By Editrecord = By.xpath("(//tr//i[@class='fas fa-pencil-alt text-info font-16'])[1]");
 	private final By block = By.xpath("//input[@name='block']");
 	private final By street = By.xpath("//input[@name='street']");
 	private final By floor = By.xpath("//input[@name='floor']");
@@ -17,7 +17,7 @@ public class VenuePage extends BasePage {
 	private final By postalcode = By.xpath("//input[@name='postal_code']");
 	private final By wheelchairaccess = By.xpath("//div//label[.='Wheel Chair Access ']");
 	private final By Status = By.xpath("//div//label[text()='Status : ']");
-	private final By updateprofile = By.cssSelector(".btn.btn-primary.px-4.float-right");
+	private final By updateprofile = By.cssSelector(".btn.btn-primary.mar-r-10");
 	private final By cancelprofile = By.cssSelector(".btn.btn-danger");
 	
 	

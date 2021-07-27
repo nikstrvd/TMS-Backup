@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 import com.tms.enums.WaitStrategy;
 
-public class StaffPage extends BasePage {
+public class ManagerPage extends BasePage {
 	
 	private final By Addnew = By.xpath("//a[text()=' Add New']");
 	private final By Editrecord = By.xpath("(//tr//i[@class='fas fa-pencil-alt text-info font-16'])[3]");
@@ -52,21 +52,21 @@ public class StaffPage extends BasePage {
 
 	}
 	
-	public StaffPage EnterdetailInName(String Name)
+	public ManagerPage EnterdetailInName(String Name)
 	{
 		clear(name, Name, WaitStrategy.PRESENSE, "Name Textbox field");
 		sendKeys(name, Name, WaitStrategy.PRESENSE, "Name Textbox field");
 		return this;
 	}
 	
-	public StaffPage EnterdetailInEmail(String Email)
+	public ManagerPage EnterdetailInEmail(String Email)
 	{
 		clear(email, Email, WaitStrategy.PRESENSE, "Email Textbox field");
 		sendKeys(email, Email, WaitStrategy.PRESENSE, "Email Textbox field");
 		return this;
 	}
 	
-	public StaffPage EnterdetailInPhonenumber(String Phonenumber)
+	public ManagerPage EnterdetailInPhonenumber(String Phonenumber)
 	{
 		clear(phonenumber, Phonenumber, WaitStrategy.PRESENSE, "phonenumber Textbox field");
 		sendKeys(phonenumber, Phonenumber, WaitStrategy.PRESENSE, "phonenumber Textbox field");

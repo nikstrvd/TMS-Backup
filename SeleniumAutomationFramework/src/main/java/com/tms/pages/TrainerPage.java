@@ -8,7 +8,7 @@ import com.tms.enums.WaitStrategy;
 public class TrainerPage extends BasePage {
 		
 	private final By Addnew = By.xpath("//a[text()=' Add New']");
-	private final By Editrecord = By.xpath("//tr//i[@class='fas fa-edit text-info font-16']");
+	private final By Editrecord = By.xpath("(//tr//i[@class='fas fa-pencil-alt text-info font-16'])[3]");
 	private final By name = By.xpath("//input[@name='name']");
 	private final By email = By.xpath("//input[@name='email']");
 	private final By phonenumber = By.xpath("//input[@name='phone_number']");
@@ -16,7 +16,7 @@ public class TrainerPage extends BasePage {
 	private final By linkedinurl = By.xpath("//input[@name='linkedInURL']");
 	private final By description = By.xpath("//input[@name='qualifications[0][description]']");
 	private final By domainarea = By.xpath("//input[@name='domainArea']");
-	private final By updateprofile = By.cssSelector(".btn.btn-primary.px-4.float-right");
+	private final By updateprofile = By.cssSelector(".btn.btn-primary.mar-r-10");
 	private final By cancelprofile = By.cssSelector(".btn.btn-danger");
 	private final By Timezone = By.id("select2-timezone-container");
 	private final By Timezoneselection = By.xpath("//ul[@class='select2-results__options']/li[.='(UTC +08:00) Asia/Singapore']");

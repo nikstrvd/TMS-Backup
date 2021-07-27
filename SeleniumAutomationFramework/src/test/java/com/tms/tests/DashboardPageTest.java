@@ -5,10 +5,13 @@ import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.tms.pages.BasePage;
 import com.tms.pages.DashboardPage;
 import com.tms.pages.LoginPage;
 
 public final class DashboardPageTest extends BaseTest {
+	
+	BasePage bp = new BasePage();
 	
 	private DashboardPageTest()
 	{
@@ -66,19 +69,69 @@ public final class DashboardPageTest extends BaseTest {
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		new DashboardPage().clickonMenu(data.get("menuname"));
 		String ActualTitle = lp.getTitle();
-		Assert.assertEquals(ActualTitle, "Soft Booking Course - TMS");
-	}
-	
-	@Test
-	public void Menutest5(Map<String, String> data)
-	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
-		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
-		new DashboardPage().clickonMenu(data.get("menuname"));
-		String ActualTitle = lp.getTitle();
 		Assert.assertEquals(ActualTitle, "Payment - TMS");
 	}
+	
+
+	 @Test 
+	  public void SubMenutest6(Map<String, String> data) 
+	  { 
+		  LoginPage lp = new LoginPage(); 
+		  DashboardPage dp = new DashboardPage(); 
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
+		  String ActualTitle = lp.getTitle();
+		  Assert.assertEquals(ActualTitle, "Managers - TMS");		  
+	  
+	  }	
+	 
+	 @Test 
+	  public void SubMenutest10(Map<String, String> data) 
+	  { 
+		  LoginPage lp = new LoginPage(); 
+		  DashboardPage dp = new DashboardPage(); 
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
+		  String ActualTitle = lp.getTitle();
+		  Assert.assertEquals(ActualTitle, "Waiting List Course - TMS");		  
+	  
+	  }	
+	 
+	 @Test 
+	  public void SubMenutest7(Map<String, String> data) 
+	  { 
+		  LoginPage lp = new LoginPage(); 
+		  DashboardPage dp = new DashboardPage(); 
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
+		  String ActualTitle = lp.getTitle();
+		  Assert.assertEquals(ActualTitle, "All Course Runs - TMS");		  
+	  
+	  }	
+	 
+	 @Test 
+	  public void SubMenutest8(Map<String, String> data) 
+	  { 
+		  LoginPage lp = new LoginPage(); 
+		  DashboardPage dp = new DashboardPage(); 
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
+		  String ActualTitle = lp.getTitle();
+		  Assert.assertEquals(ActualTitle, "All Completed Course Runs - TMS");		  
+	  
+	  }	
+	 
+	 @Test 
+	  public void SubMenutest9(Map<String, String> data) 
+	  { 
+		  LoginPage lp = new LoginPage(); 
+		  DashboardPage dp = new DashboardPage(); 
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
+		  String ActualTitle = lp.getTitle();
+		  Assert.assertEquals(ActualTitle, "Soft Booking Course - TMS");		  
+	  
+	  }	
 	
 	  @Test 
 	  public void SubMenutest(Map<String, String> data) 
@@ -123,6 +176,7 @@ public final class DashboardPageTest extends BaseTest {
 		  LoginPage lp = new LoginPage(); 
 		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  bp.scrool1();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
 		  Assert.assertEquals(ActualTitle, "Staff Permissions - TMS");
@@ -135,9 +189,22 @@ public final class DashboardPageTest extends BaseTest {
 		  LoginPage lp = new LoginPage(); 
 		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  bp.scrool1();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
 		  Assert.assertEquals(ActualTitle, "Xero Connection - TMS");
+	  
+	  }
+	  
+	  @Test 
+	  public void SubMenutest5(Map<String, String> data) 
+	  { 
+		  LoginPage lp = new LoginPage(); 
+		  DashboardPage dp = new DashboardPage(); 
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
+		  String ActualTitle = lp.getTitle();
+		  Assert.assertEquals(ActualTitle, "Add Course - TMS");
 	  
 	  }
 	  

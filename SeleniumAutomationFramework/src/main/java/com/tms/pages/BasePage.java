@@ -45,6 +45,12 @@ public class BasePage {
 		jse.executeScript("window.scrollBy(0, 500)");
 	}
 	
+	public void scrool1()
+	{
+		JavascriptExecutor jse =  (JavascriptExecutor) DriverManager.getDriver();
+		jse.executeScript("document.querySelector('.menu-body.slimscroll.in').scrollTop=2000");
+	}
+	
 	public static void selectOptionFromDropDown(List<WebElement> options, String value)
 	{
 		for (WebElement option:options)

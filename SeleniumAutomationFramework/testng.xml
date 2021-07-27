@@ -12,6 +12,7 @@
 			<class name="com.tms.tests.LoginPageTest" />
 			<class name="com.tms.tests.DashboardPageTest" />
 			<class name="com.tms.tests.StaffPageTest"/>
+			<class name="com.tms.tests.ManagerPageTest"/>
 			<class name="com.tms.tests.TrainerPageTest"/>
 			<class name="com.tms.tests.VenuePageTest"/>
 			<class name="com.tms.tests.CoursePageTest"/>
