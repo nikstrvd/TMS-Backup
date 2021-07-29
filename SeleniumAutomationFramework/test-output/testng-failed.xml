@@ -8,21 +8,13 @@
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="com.tms.tests.ManagerPageTest">
+      <class name="com.tms.tests.DashboardPageTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="AddnewRecordTest" invocation-numbers="0"/>
+          <include name="AttendanceButtonListdotsButtonforUpcomingCourseRun" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.tms.tests.ManagerPageTest -->
-      <class name="com.tms.tests.StaffPageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="AddnewRecordTest" invocation-numbers="0"/>
-          <include name="EditRecordTest" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.tms.tests.StaffPageTest -->
+      </class> <!-- com.tms.tests.DashboardPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

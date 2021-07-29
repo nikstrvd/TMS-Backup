@@ -45,6 +45,18 @@ public class BasePage {
 		jse.executeScript("window.scrollBy(0, 500)");
 	}
 	
+	public void scroll3()
+	{
+		JavascriptExecutor jse =  (JavascriptExecutor) DriverManager.getDriver();
+		jse.executeScript("window.scrollBy(0, 700)");
+	}
+	
+	public void scroll2()
+	{
+		JavascriptExecutor jse =  (JavascriptExecutor) DriverManager.getDriver();
+		jse.executeScript("window.scrollBy(0, 1500)");
+	}
+	
 	public void scrool1()
 	{
 		JavascriptExecutor jse =  (JavascriptExecutor) DriverManager.getDriver();

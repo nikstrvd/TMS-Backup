@@ -19,6 +19,116 @@ public final class DashboardPageTest extends BaseTest {
 	}
 	
 	@Test
+	public void ViewButtonListdotsButtonforUpcomingCourseRun(Map<String, String> data)
+	{
+		LoginPage lp = new LoginPage();
+		DashboardPage dp = new DashboardPage();
+		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		bp.scroll2();
+		dp.clickonListdotsButtonforUpcomingCourseRun();
+		dp.clickonViewButtonListdotsButtonforUpcomingCourseRun();
+		String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Courses Run View - TMS");
+		
+		}
+	
+	@Test
+	public void StudentlistButtonListdotsButtonforUpcomingCourseRun(Map<String, String> data)
+	{
+		LoginPage lp = new LoginPage();
+		DashboardPage dp = new DashboardPage();
+		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		bp.scroll2();
+		dp.clickonListdotsButtonforUpcomingCourseRun();
+		dp.clickonStudentlistButtonListdotsButtonforUpcomingCourseRun();
+		String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Courses Run Student List - TMS");
+		
+		}
+	
+	@Test
+	public void AttendanceButtonListdotsButtonforUpcomingCourseRun(Map<String, String> data)
+	{
+		LoginPage lp = new LoginPage();
+		DashboardPage dp = new DashboardPage();
+		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		bp.scroll2();
+		dp.clickonListdotsButtonforUpcomingCourseRun();
+		dp.clickonAttendanceButtonListdotsButtonforUpcomingCourseRun();
+		String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Attendance Assessment List - Course Run - TMS");
+		
+		}
+	
+	@Test
+	public void EditButtonListdotsButtonforUpcomingCourseRun(Map<String, String> data)
+	{
+		LoginPage lp = new LoginPage();
+		DashboardPage dp = new DashboardPage();
+		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		bp.scroll2();
+		dp.clickonListdotsButtonforUpcomingCourseRun();
+		dp.clickonEditButtonListdotsButtonforUpcomingCourseRun();
+		String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Edit Course Run - TMS");
+		
+		}
+	
+	@Test
+	public void ViewbuttonfromListdotsButtonforNewStudentList(Map<String, String> data)
+	{
+		LoginPage lp = new LoginPage();
+		DashboardPage dp = new DashboardPage();
+		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		bp.scroll3();
+		dp.clickonListdotsButtonforNewStudentList();
+		dp.clickonViewbuttonfromListdotsButtonforNewStudentList();
+		String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Student Enrolment - TMS");
+		
+		}
+	
+	@Test
+	public void EditbuttonfromListdotsButtonforNewStudentList(Map<String, String> data)
+	{
+		LoginPage lp = new LoginPage();
+		DashboardPage dp = new DashboardPage();
+		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		bp.scroll3();
+		dp.clickonListdotsButtonforNewStudentList();
+		dp.clickonEditbuttonfromListdotsButtonforNewStudentList();
+		String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Edit Student Enrolment - TMS");
+		
+		}
+	
+	@Test
+	public void ViewAllNewStudentList(Map<String, String> data)
+	{
+		LoginPage lp = new LoginPage();
+		DashboardPage dp = new DashboardPage();
+		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		bp.scroll();
+		dp.clickonViewAllButtonforNewStudentList();
+		String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Student Enrolment List - TMS");
+		
+		}
+	
+	@Test
+	public void ViewAllUpcomingCourseRun(Map<String, String> data)
+	{
+		LoginPage lp = new LoginPage();
+		DashboardPage dp = new DashboardPage();
+		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		bp.scroll2();
+		dp.clickonViewAllButtonforUpcomingCourseRun();
+		String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "All Course Runs - TMS");
+		
+		}
+	
+	@Test
 	public void Menutest(Map<String, String> data)
 	{
 		LoginPage lp = new LoginPage();

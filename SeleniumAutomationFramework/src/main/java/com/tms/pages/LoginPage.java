@@ -10,7 +10,7 @@ public final class LoginPage extends BasePage {
 	private final By buttonLogin = By.xpath("//button");
 	private final By forgetpassword = By.xpath("//a[text()=' Forgot password?']");
 	private final By resetbutton = By.xpath("//button[@type='submit']");
-	private final By forgetpasswordvalidation = By.xpath("//li[.='Please check reset Password email.']");
+	private final By forgetpasswordvalidation = By.cssSelector(".col-md-12.alert.alert-success");
 	private final By forgetpassword2 = By.xpath("//li[.=\"We can't find a user with that email address.\"]");
 	private final By forgetpassword3 = By.xpath("//li[.='The email must be a valid email address.']");
 	private final By logindata = By.xpath("//li[.='The email field is required.']");
