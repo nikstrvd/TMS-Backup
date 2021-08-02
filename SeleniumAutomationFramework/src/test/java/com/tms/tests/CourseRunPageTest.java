@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.tms.pages.BasePage;
 import com.tms.pages.CoursePage;
 import com.tms.pages.CourseRunPage;
 import com.tms.pages.DashboardPage;
@@ -22,64 +23,144 @@ public class CourseRunPageTest extends BaseTest {
 
 	private CourseRunPageTest() {
 	}
+	
+	LoginPage lp = new LoginPage(); 
+	DashboardPage dp = new DashboardPage();
+	CoursePage cp = new CoursePage();
+	CourseRunPage cr = new CourseRunPage();
+	BasePage bp = new BasePage();
 
-	@Test(enabled = false)
-	public void AddCourseRunRecordTest(Map<String, String> data) {
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
+	@Test()
+	public void AllCourseRunRecordTest(Map<String, String> data) {
+		   
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
-		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
-		  CoursePage cp = new CoursePage();
-		  cp.Addcourserun();
-		  cp.Coursetype();
-		  cp.Selectcoursetype();
-		  cp.Assistenttrainer();
-		  cp.SelectAssitent();
-		  cp.Selectmodeoftraining();
-		  cp.Selectoption();
-		  cp.Courseprimatyvenue();
-		  cp.Selectvenue();
-		  cp.Scheduleinfo(data.get("Scheduleinfo"));
-		  cp.Scheduleinfodesc(data.get("Scheduleinfodesc"));
-		  cp.Coursevacdesc(data.get("Coursevacdesc"));
-		  cp.Coursevacancycode();
-		  cp.Selectcoursevacancycode();
-		  cp.Scheduleinformation(data.get("Scheduleinformation"));
-		  cp.Minintakesize(data.get("Minintakesize"));
-		  cp.Maxintakesize(data.get("Maxintakesize"));
-		  cp.Threshold(data.get("Threshold"));
-		  cp.Publish();
-		  cp.updaterecord();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));		  
+		  cr.clickonListdotsButton();
+		  cr.clickonViewFromListdotsButton();
+		 bp.scroll2();
+		  String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Courses Run View - TMS");
+		  
+	}
+	
+	@Test()
+	public void ClickonStudentListfromAllCourseRunRecordTest(Map<String, String> data) {
+		   
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));		  
+		  cr.clickonListdotsButton();
+		  cr.clickonStudentListFromListdotsButton();
+		 bp.scroll2();
+		  String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Courses Run Student List - TMS");
+		  
+	}
+	
+	@Test()
+	public void ClickonAssessmentAndAttendancefromAllCourseRunRecordTest(Map<String, String> data) {
+		   
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));		  
+		  cr.clickonListdotsButton();
+		  cr.clickonAttendenceListFromListdotsButton();
+		 bp.scroll2();
+		  String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Attendance Assessment List - Course Run - TMS");
+		  
 	}
 	
 	@Test()
 	public void EditCourseRunRecordTest(Map<String, String> data) {
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
+		
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
-		  CourseRunPage cp = new CourseRunPage();
-		  cp.Viewcourserun();
-		  cp.Editcourserun();
-		  cp.Coursetype();
-		  cp.Selectcoursetype();
-		  cp.Assistenttrainer();
-		  cp.SelectAssitent();
-		  cp.Selectmodeoftraining();
-		  cp.Selectoption();
-		  cp.Courseprimatyvenue();
-		  cp.Selectvenue();
-		  cp.Scheduleinfo(data.get("Scheduleinfo"));
-		  cp.Scheduleinfodesc(data.get("Scheduleinfodesc"));
-		  cp.Coursevacdesc(data.get("Coursevacdesc"));
-		  cp.Coursevacancycode();
-		  cp.Selectcoursevacancycode();
-		  cp.Scheduleinformation(data.get("Scheduleinformation"));
-		  cp.Coursecode(data.get("Coursecode"));
-		  cp.Minintakesize(data.get("Minintakesize"));
-		  cp.Maxintakesize(data.get("Maxintakesize"));
-		  cp.Threshold(data.get("Threshold"));
-		  cp.Publish();
-		  cp.updaterecord();
+		  cr.clickonListdotsButton();
+		  cr.clickonEditrecordFromListdotsButton();
+		  cr.Coursetype();
+		  cr.Selectcoursetype();
+		  cr.Assistenttrainer();
+		  cr.SelectAssitent();
+		  cr.Selectmodeoftraining();
+		  cr.Selectoption();
+		  cr.Courseprimatyvenue();
+		  cr.Selectvenue();
+		  cr.Scheduleinfo(data.get("Scheduleinfo"));
+		  cr.Scheduleinfodesc(data.get("Scheduleinfodesc"));
+		  cr.Coursevacdesc(data.get("Coursevacdesc"));
+		  cr.Coursevacancycode();
+		  cr.Selectcoursevacancycode();
+		  cr.Scheduleinformation(data.get("Scheduleinformation"));
+		  cr.Minintakesize(data.get("Minintakesize"));
+		  cr.Maxintakesize(data.get("Maxintakesize"));
+		  cr.Threshold(data.get("Threshold"));
+		  cr.Publish();
+		  cr.updaterecord();
+	}
+	
+	@Test()
+	public void CompletedCourseRunRecordTest(Map<String, String> data) {
+		   
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));		  
+		  cr.clickonListdotsButton();
+		  cr.clickonViewFromListdotsButton();
+		 bp.scroll2();
+		  String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Courses Run View - TMS");
+		  
+	}
+	
+	@Test()
+	public void ClickonCompletedStudentListfromAllCourseRunRecordTest(Map<String, String> data) {
+		   
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));		  
+		  cr.clickonListdotsButton();
+		  cr.clickonStudentListFromListdotsButton();
+		 bp.scroll2();
+		  String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Courses Run Student List - TMS");
+		  
+	}
+	
+	@Test()
+	public void ClickonCompletedAssessmentAndAttendancefromAllCourseRunRecordTest(Map<String, String> data) {
+		   
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));		  
+		  cr.clickonListdotsButton();
+		  cr.clickonAttendenceListFromListdotsButton();
+		 bp.scroll2();
+		  String ActualTitle = lp.getTitle();
+		Assert.assertEquals(ActualTitle, "Attendance Assessment List - Course Run - TMS");
+		  
+	}
+	
+	@Test()
+	public void EditCompletedCourseRunRecordTest(Map<String, String> data) {
+		
+		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
+		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
+		  cr.clickonListdotsButton();
+		  cr.clickonEditrecordFromListdotsButton();
+		  cr.Coursetype();
+		  cr.Selectcoursetype();
+		  cr.Assistenttrainer();
+		  cr.SelectAssitent();
+		  cr.Selectmodeoftraining();
+		  cr.Selectoption();
+		  cr.Courseprimatyvenue();
+		  cr.Selectvenue();
+		  cr.Scheduleinfo(data.get("Scheduleinfo"));
+		  cr.Scheduleinfodesc(data.get("Scheduleinfodesc"));
+		  cr.Coursevacdesc(data.get("Coursevacdesc"));
+		  cr.Coursevacancycode();
+		  cr.Selectcoursevacancycode();
+		  cr.Scheduleinformation(data.get("Scheduleinformation"));
+		  cr.Minintakesize(data.get("Minintakesize"));
+		  cr.Maxintakesize(data.get("Maxintakesize"));
+		  cr.Threshold(data.get("Threshold"));
+		  cr.Publish();
+		  cr.updaterecord();
 	}
 }

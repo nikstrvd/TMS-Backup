@@ -20,7 +20,7 @@ public class DashboardPage extends BasePage{
 	private final By view = By.xpath("(//i[@class='fas fa-eye font-16'])[1]");
 	private final By view1 = By.xpath("(//i[@class='fas fa-eye font-16'])[6]");
 	private final By Studentlist = By.xpath("(//a[text()='Students List'])[1]");
-	private final By Attendance = By.xpath("(//li[.='Attendance & Assessments'])[1]");
+	private final By Attendance = By.xpath("(//i[@class='fas fa-eye font-16'])[8]");
 	private final By Edit = By.xpath("(//i[@class='fas fa-pencil-alt font-16'])[1]");
 	private final By Edit1 = By.xpath("(//i[@class='fas fa-pencil-alt font-16'])[6]");
 	

@@ -10,8 +10,11 @@ import com.tms.enums.WaitStrategy;
 public class CoursePage extends BasePage {
 	
 	
-	private final By Addnew = By.xpath("//a[text()='+ Add New']");
-	private final By Editrecord = By.xpath("//tr//i[@class='fas fa-edit text-info font-16']");
+	private final By Addnew = By.xpath("//a[.=' Add New']");
+	private final By Listdots = By.xpath("(//span[@class='list-dots'])[1]");
+	private final By Viewcourserun = By.xpath("(//i[@class='fas fa-eye font-16'])[1]");
+	private final By Addcourserun = By.xpath("(//i[@class='fas fa-plus font-16'])[1]");	
+	private final By Editrecord = By.xpath("(//i[@class='fas fa-pencil-alt font-16'])[1]");
 	private final By name = By.xpath("//input[@name='name']");
 	private final By selectcoursemodule = By.id("select2-course_type_id-container");
 	private final By Selectcourse = By.xpath("//li[text()='Booster Sessions ']");
@@ -19,9 +22,8 @@ public class CoursePage extends BasePage {
 	private final By coursecode = By.xpath("//input[@name='course_code']");
 	private final By trainers = By.xpath("(//ul[@class='select2-selection__rendered'])[1]");
 	private final By selecttrainers = By.xpath("//li[text()='Nikhil Trivedi']");
-	private final By updateprofile = By.cssSelector(".btn.btn-primary.px-4.float-right");
+	private final By updateprofile = By.cssSelector(".btn.btn-primary.mar-r-10");
 	private final By cancelprofile = By.cssSelector(".btn.btn-danger");
-	private final By Addcourserun = By.xpath("(//i[@class='fas fa-plus text-info font-16'])[1]");
 	private final By Coursetype = By.xpath("//select[@name='course_type']");
 	private final By Selectcoursetype = By.xpath("//option[text()='WSQ']");
 	private final By Assistenttrainer = By.xpath("//ul[@class='select2-selection__rendered']");
@@ -40,13 +42,34 @@ public class CoursePage extends BasePage {
 	private final By Maxintakesize = By.id("intakesize");
 	private final By Threshold = By.id("threshold");
 	private final By Publish = By.cssSelector(".custom-control.custom-switch.switch-success");
-	private final By Viewcourserun = By.xpath("(//a[@data-original-title='View Course Run'])[1]");
 	private final By Editcourserun = By.xpath("(//a[@data-original-title='Edit'])[1]");
+	
+	
 	
 	public void Addcourserun()
 	{
 		click(Addcourserun, WaitStrategy.CLICKABLE, "Addcourserun button");
 
+	}
+	
+	public void clickonListdotsButton()
+	{
+		click(Listdots, WaitStrategy.CLICKABLE, "listdotsclick button");
+	}
+	
+	public void ClickonViewCourseRunfromListDotsButton()
+	{
+		click(Viewcourserun, WaitStrategy.CLICKABLE, "Viewcourserun button");
+	}
+	
+	public void ClickonAddCourseRunfromListDotsButton()
+	{
+		click(Addcourserun, WaitStrategy.CLICKABLE, "Addcourserun button");
+	}
+	
+	public void ClickonEditfromListDotsButton()
+	{
+		click(Editrecord, WaitStrategy.CLICKABLE, "Editrecord button");
 	}
 	
 	public void Viewcourserun()

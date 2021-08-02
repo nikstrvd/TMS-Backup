@@ -10,8 +10,7 @@ import com.tms.enums.WaitStrategy;
 public class CourseRunPage extends BasePage {
 	
 	
-	
-	private final By updateprofile = By.cssSelector(".btn.btn-primary.px-4.float-right");
+	private final By updateprofile = By.cssSelector(".btn.btn-primary.mar-r-10");
 	private final By Coursetype = By.xpath("//select[@name='course_type']");
 	private final By Selectcoursetype = By.xpath("//option[text()='non-WSQ']");
 	private final By Assistenttrainer = By.xpath("//ul[@class='select2-selection__rendered']");
@@ -33,8 +32,38 @@ public class CourseRunPage extends BasePage {
 	private final By Publish = By.cssSelector(".custom-control.custom-switch.switch-success");
 	private final By Viewcourserun = By.xpath("(//a[@data-original-title='View Course Run'])[1]");
 	private final By Editcourserun = By.xpath("(//a[@data-original-title='Edit'])[1]");
-	
+	private final By Listdots = By.xpath("(//span[@class='list-dots'])[1]");
+	private final By View = By.xpath("(//li[.='View'])[1]");
+	private final By StudentList = By.xpath("(//li[.='Students List'])[1]");
+	private final By Attendence = By.xpath("(//li[.='Attendance & Assessments'])[1]");
+	private final By Editrecord = By.xpath("(//a[.='Edit'])[1]");	
 		
+	
+	public void clickonListdotsButton()
+	{
+		click(Listdots, WaitStrategy.CLICKABLE, "listdotsclick button");
+	}
+	
+	public void clickonViewFromListdotsButton()
+	{
+		click(View, WaitStrategy.CLICKABLE, "View button");
+	}
+	
+	public void clickonStudentListFromListdotsButton()
+	{
+		click(StudentList, WaitStrategy.CLICKABLE, "StudentList button");
+	}
+	
+	public void clickonAttendenceListFromListdotsButton()
+	{
+		click(Attendence, WaitStrategy.CLICKABLE, "Attendence button");
+	}
+	
+	public void clickonEditrecordFromListdotsButton()
+	{
+		click(Editrecord, WaitStrategy.CLICKABLE, "Editrecord button");
+	}
+	
 	public void Viewcourserun()
 	{
 		click(Viewcourserun, WaitStrategy.CLICKABLE, "Viewcourserun button");

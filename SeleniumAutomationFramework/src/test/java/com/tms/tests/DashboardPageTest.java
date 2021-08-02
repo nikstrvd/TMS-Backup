@@ -12,6 +12,8 @@ import com.tms.pages.LoginPage;
 public final class DashboardPageTest extends BaseTest {
 	
 	BasePage bp = new BasePage();
+	LoginPage lp = new LoginPage();
+	DashboardPage dp = new DashboardPage();
 	
 	private DashboardPageTest()
 	{
@@ -21,8 +23,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void ViewButtonListdotsButtonforUpcomingCourseRun(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		bp.scroll2();
 		dp.clickonListdotsButtonforUpcomingCourseRun();
@@ -35,8 +35,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void StudentlistButtonListdotsButtonforUpcomingCourseRun(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		bp.scroll2();
 		dp.clickonListdotsButtonforUpcomingCourseRun();
@@ -49,8 +47,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void AttendanceButtonListdotsButtonforUpcomingCourseRun(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		bp.scroll2();
 		dp.clickonListdotsButtonforUpcomingCourseRun();
@@ -63,8 +59,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void EditButtonListdotsButtonforUpcomingCourseRun(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		bp.scroll2();
 		dp.clickonListdotsButtonforUpcomingCourseRun();
@@ -77,8 +71,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void ViewbuttonfromListdotsButtonforNewStudentList(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		bp.scroll3();
 		dp.clickonListdotsButtonforNewStudentList();
@@ -91,8 +83,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void EditbuttonfromListdotsButtonforNewStudentList(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		bp.scroll3();
 		dp.clickonListdotsButtonforNewStudentList();
@@ -102,11 +92,10 @@ public final class DashboardPageTest extends BaseTest {
 		
 		}
 	
+	
 	@Test
 	public void ViewAllNewStudentList(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		bp.scroll();
 		dp.clickonViewAllButtonforNewStudentList();
@@ -118,8 +107,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void ViewAllUpcomingCourseRun(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		bp.scroll2();
 		dp.clickonViewAllButtonforUpcomingCourseRun();
@@ -131,8 +118,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void Menutest(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		new DashboardPage().clickonMenu(data.get("menuname"));
 		String ActualTitle = lp.getTitle();
@@ -141,8 +126,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void Menutest1(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		new DashboardPage().clickonMenu(data.get("menuname"));
 		String ActualTitle = lp.getTitle();
@@ -152,8 +135,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void Menutest2(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		new DashboardPage().clickonMenu(data.get("menuname"));
 		String ActualTitle = lp.getTitle();
@@ -163,8 +144,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void Menutest3(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		new DashboardPage().clickonMenu(data.get("menuname"));
 		String ActualTitle = lp.getTitle();
@@ -174,8 +153,6 @@ public final class DashboardPageTest extends BaseTest {
 	@Test
 	public void Menutest4(Map<String, String> data)
 	{
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		new DashboardPage().clickonMenu(data.get("menuname"));
 		String ActualTitle = lp.getTitle();
@@ -186,8 +163,6 @@ public final class DashboardPageTest extends BaseTest {
 	 @Test 
 	  public void SubMenutest6(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
@@ -198,8 +173,6 @@ public final class DashboardPageTest extends BaseTest {
 	 @Test 
 	  public void SubMenutest10(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
@@ -210,8 +183,6 @@ public final class DashboardPageTest extends BaseTest {
 	 @Test 
 	  public void SubMenutest7(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
@@ -222,8 +193,6 @@ public final class DashboardPageTest extends BaseTest {
 	 @Test 
 	  public void SubMenutest8(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
@@ -234,8 +203,6 @@ public final class DashboardPageTest extends BaseTest {
 	 @Test 
 	  public void SubMenutest9(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
@@ -246,8 +213,6 @@ public final class DashboardPageTest extends BaseTest {
 	  @Test 
 	  public void SubMenutest(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
@@ -259,8 +224,6 @@ public final class DashboardPageTest extends BaseTest {
 	  @Test 
 	  public void SubMenutest1(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
@@ -271,8 +234,6 @@ public final class DashboardPageTest extends BaseTest {
 	  @Test 
 	  public void SubMenutest2(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
@@ -283,8 +244,6 @@ public final class DashboardPageTest extends BaseTest {
 	  @Test 
 	  public void SubMenutest3(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  bp.scrool1();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
@@ -296,8 +255,6 @@ public final class DashboardPageTest extends BaseTest {
 	  @Test 
 	  public void SubMenutest4(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  bp.scrool1();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
@@ -309,8 +266,6 @@ public final class DashboardPageTest extends BaseTest {
 	  @Test 
 	  public void SubMenutest5(Map<String, String> data) 
 	  { 
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonSubMenu(data.get("menuname"), data.get("submenu"));
 		  String ActualTitle = lp.getTitle();
@@ -321,8 +276,6 @@ public final class DashboardPageTest extends BaseTest {
 	  @Test
 	  public void VerifyChangePasswordTest(Map<String, String> data)
 	  {
-		  LoginPage lp = new LoginPage(); 
-		  DashboardPage dp = new DashboardPage(); 
 		  DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		  dp.clickonLoggedinUserDropdownlist();
 		  dp.clickonChangepassword();

@@ -5,8 +5,8 @@ import com.tms.enums.WaitStrategy;
 
 public class CourseSoftBookingsPage extends BasePage{
 	
-	private final By Addnew = By.xpath("//button[.='+ Add New']");
-	private final By Editrecord = By.xpath("//tr//i[@class='fas fa-edit text-info font-16']");
+	private final By Addnew = By.xpath("//i[@class='add-new']");
+	private final By Editrecord = By.xpath("(//a[.=' Edit'])[1]");
 	private final By SelectCourseRun = By.cssSelector(".select2-selection__rendered");
 	private final By selectcourserunfromdropdown = By.xpath("//ul[@class='select2-results__options']/li[3]");
 	private final By deadlinedate = By.id("deadline_date");
@@ -21,7 +21,14 @@ public class CourseSoftBookingsPage extends BasePage{
 	private final By Status1 = By.xpath("//select[@name='students[0][status]']");
 	private final By Status = By.xpath("//select[@name='status']");
 	private final By Selectstatus = By.xpath("//option[contains(text(),'Booked')]");
-	private final By updateprofile = By.cssSelector(".btn.btn-primary.px-4.float-right");
+	private final By updateprofile = By.cssSelector(".btn.btn-primary.mar-r-10");
+	private final By Listdots = By.xpath("(//span[@class='list-dots'])[1]");
+	
+	
+	public void clickonListdotsButton()
+	{
+		click(Listdots, WaitStrategy.CLICKABLE, "listdotsclick button");
+	}
 	
 	public void Editrecord()
 	{
