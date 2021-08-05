@@ -5,6 +5,7 @@ import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.tms.pages.BasePage;
 import com.tms.pages.DashboardPage;
 import com.tms.pages.LoginPage;
 import com.tms.pages.StaffPage;
@@ -14,6 +15,11 @@ public class VenuePageTest extends BaseTest {
 
 	private VenuePageTest() {
 	}
+	
+	LoginPage lp = new LoginPage();
+	DashboardPage dp = new DashboardPage();
+	VenuePage vp = new VenuePage();
+	BasePage bp = new BasePage();
 
 	@Test
 	public void AddnewVenueRecordTest(Map<String, String> data) {
@@ -22,7 +28,6 @@ public class VenuePageTest extends BaseTest {
 		DashboardPage dp = new DashboardPage();
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		new DashboardPage().clickonMenu(data.get("menuname"));
-		VenuePage vp = new VenuePage();
 		vp.Addnewrecord();
 		vp.EnterdetailInBlock(data.get("Block"));
 		vp.EnterdetailInStreet(data.get("Street"));
@@ -40,11 +45,11 @@ public class VenuePageTest extends BaseTest {
 
 	@Test
 	public void EditVenueRecordTest(Map<String, String> data) {
-		LoginPage lp = new LoginPage();
-		DashboardPage dp = new DashboardPage();
+		
 		DashboardPage title = lp.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin();
 		new DashboardPage().clickonMenu(data.get("menuname"));
-		VenuePage vp = new VenuePage();
+		bp.Horizonatalscroll();
+		vp.clickonListdotsButton();
 		vp.Editrecord();
 		vp.EnterdetailInBlock(data.get("Block"));
 		vp.EnterdetailInStreet(data.get("Street"));

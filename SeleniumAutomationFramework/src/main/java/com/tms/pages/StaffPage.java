@@ -7,7 +7,7 @@ import com.tms.enums.WaitStrategy;
 public class StaffPage extends BasePage {
 	
 	private final By Addnew = By.xpath("//a[text()=' Add New']");
-	private final By Editrecord = By.xpath("(//tr//i[@class='fas fa-pencil-alt text-info font-16'])[3]");
+	private final By Editrecord = By.xpath("(//i[@class='fas fa-pencil-alt text-info font-16'])[3]");
 	private final By name = By.xpath("//input[@name='name']");
 	private final By email = By.xpath("//input[@name='email']");
 	private final By phonenumber = By.xpath("//input[@name='phone_number']");

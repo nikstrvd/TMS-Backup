@@ -6,8 +6,8 @@ import com.tms.enums.WaitStrategy;
 
 public class VenuePage extends BasePage {
 	
-	private final By Addnew = By.xpath("//a[text()=' Add New']");
-	private final By Editrecord = By.xpath("(//tr//i[@class='fas fa-pencil-alt text-info font-16'])[1]");
+	private final By Addnew = By.xpath("//a[.=' Add Venue']");
+	private final By Editrecord = By.xpath("(//a[.=' Edit'])[1]");
 	private final By block = By.xpath("//input[@name='block']");
 	private final By street = By.xpath("//input[@name='street']");
 	private final By floor = By.xpath("//input[@name='floor']");
@@ -19,6 +19,12 @@ public class VenuePage extends BasePage {
 	private final By Status = By.xpath("//div//label[text()='Status : ']");
 	private final By updateprofile = By.cssSelector(".btn.btn-primary.mar-r-10");
 	private final By cancelprofile = By.cssSelector(".btn.btn-danger");
+	private final By Listdots = By.xpath("(//span[@class='list-dots'])[1]");
+	
+	public void clickonListdotsButton()
+	{
+		click(Listdots, WaitStrategy.CLICKABLE, "listdotsclick button");
+	}
 	
 	
 	public void Addnewrecord()

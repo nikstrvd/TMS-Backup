@@ -39,6 +39,12 @@ public class BasePage {
 		ExtentLogger.pass(value + " is entered successfully in " +elementname);
 	}
 	
+	public void Horizonatalscroll()
+	{
+		JavascriptExecutor jse =  (JavascriptExecutor) DriverManager.getDriver();
+		jse.executeScript("document.querySelector(\".table-responsive.dash-social\").scrollLeft=500");
+	}
+	
 	public void scroll()
 	{
 		JavascriptExecutor jse =  (JavascriptExecutor) DriverManager.getDriver();

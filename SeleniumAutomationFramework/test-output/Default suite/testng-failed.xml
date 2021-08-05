@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tms.tests.StudentEnrollmentPageTest">
+      <class name="com.tms.tests.CourseRunPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="EditStudentEnrollmentRecordTest"/>
           <include name="tearDown"/>
+          <include name="EditCourseRunRecordTest"/>
+          <include name="AllCourseRunRecordTest"/>
         </methods>
-      </class> <!-- com.tms.tests.StudentEnrollmentPageTest -->
+      </class> <!-- com.tms.tests.CourseRunPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
