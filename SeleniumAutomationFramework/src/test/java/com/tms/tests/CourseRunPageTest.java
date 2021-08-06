@@ -95,6 +95,8 @@ public class CourseRunPageTest extends BaseTest {
 		  cr.Threshold(data.get("Threshold"));
 		  cr.Publish();
 		  cr.updaterecord();
+		  String ActualTitle = lp.getTitle();
+			Assert.assertEquals(ActualTitle, "All Course Runs - TMS");
 	}
 	
 	@Test()
@@ -106,7 +108,7 @@ public class CourseRunPageTest extends BaseTest {
 		  cr.clickonViewFromListdotsButton();
 		 bp.scroll2();
 		  String ActualTitle = lp.getTitle();
-		Assert.assertEquals(ActualTitle, "Courses Run View - TMS");
+		Assert.assertEquals(ActualTitle, "All Completed Course Runs - TMS");
 		  
 	}
 	
@@ -119,7 +121,7 @@ public class CourseRunPageTest extends BaseTest {
 		  cr.clickonStudentListFromListdotsButton();
 		 bp.scroll2();
 		  String ActualTitle = lp.getTitle();
-		Assert.assertEquals(ActualTitle, "Courses Run Student List - TMS");
+		Assert.assertEquals(ActualTitle, "All Completed Course Runs - TMS");
 		  
 	}
 	
@@ -132,7 +134,7 @@ public class CourseRunPageTest extends BaseTest {
 		  cr.clickonAttendenceListFromListdotsButton();
 		 bp.scroll2();
 		  String ActualTitle = lp.getTitle();
-		Assert.assertEquals(ActualTitle, "Attendance Assessment List - Course Run - TMS");
+		Assert.assertEquals(ActualTitle, "All Completed Course Runs - TMS");
 		  
 	}
 	
@@ -162,5 +164,7 @@ public class CourseRunPageTest extends BaseTest {
 		  cr.Threshold(data.get("Threshold"));
 		  cr.Publish();
 		  cr.updaterecord();
+		  String ActualTitle = lp.getTitle();
+			Assert.assertEquals(ActualTitle, "All Completed Course Runs - TMS");
 	}
 }

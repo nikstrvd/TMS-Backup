@@ -22,6 +22,7 @@
 			<class name="com.tms.tests.CourseRunPageTest"/>
 			<class name="com.tms.tests.SortingListPage"/>
 			<class name="com.tms.tests.WaitingListPageTest"/>
+			<class name="com.tms.tests.StudentPageTest"/>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->	

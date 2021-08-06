@@ -6,8 +6,7 @@ import com.tms.enums.WaitStrategy;
 
 public class PaymentsPage extends BasePage {
 	
-	private final By Addnew = By.xpath("//button[.='+ Add New']");
-	private final By Editrecord = By.xpath("(//tr//i[@class='fas fa-pencil-alt text-info font-16'])[1]");
+	private final By Addnew = By.xpath("//button[text()=' Add New']");
 	private final By updateprofile = By.cssSelector(".btn.btn-primary.mar-r-10");
 	private final By Paymentmode = By.xpath("//select[@name='payment_mode']");
 	private final By Selectpaymentmode = By.xpath("//option[contains(.,'Cash')]");
@@ -16,11 +15,24 @@ public class PaymentsPage extends BasePage {
 	private final By Entertext = By.cssSelector(".select2-search__field");
 	private final By Selectdata = By.xpath("//li[@class='select2-results__option select2-results__option--selectable']");
 	private final By Selectdata1 = By.xpath("//li[@class='select2-results__option']");
+	private final By Listdots = By.xpath("(//span[@class='list-dots'])[1]");
+	private final By view = By.xpath("(//i[@class='fas fa-eye font-16'])[1]");
+	private final By Edit = By.xpath("(//i[@class='fas fa-edit font-16'])[1]");
+	
+	public void clickonListdotsButtonforPaymentList()
+	{
+		click(Listdots, WaitStrategy.CLICKABLE, "Listdots button");
+	}
+	
+	public void clickonViewfromListdotsButtonforPaymentList()
+	{
+		click(view, WaitStrategy.CLICKABLE, "view button");
+	}
 
 	
 	public void Editrecord()
 	{
-		click(Editrecord, WaitStrategy.CLICKABLE, "Editrecord button");
+		click(Edit, WaitStrategy.CLICKABLE, "Editrecord button");
 
 	}
 	

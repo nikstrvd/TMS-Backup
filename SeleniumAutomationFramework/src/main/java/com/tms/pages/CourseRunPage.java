@@ -20,7 +20,7 @@ public class CourseRunPage extends BasePage {
 	private final By Scheduleinfo = By.id("schinfotype_code");
 	private final By Scheduleinfodesc = By.id("schinfotype_desc");
 	private final By Courseprimatyvenue = By.xpath("//span[@id='select2-venue_id-container']");
-	private final By Selectvenue = By.xpath("//li[text()='787874 samya flats - 390012']");
+	private final By Selectvenue = By.xpath("//li[text()='AugustTesting AugustBuliding - 654321']");
 	private final By Coursevacancycode = By.xpath("//select[@name='coursevacancy_code']");
 	private final By Selectcoursevacancycode = By.xpath("//option[text()='Limited Vacancy']");
 	private final By Coursevacdesc = By.id("coursevacancy_desc");
